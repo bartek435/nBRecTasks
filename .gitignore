@@ -1,0 +1,7 @@
+venv/
+AngularPokemons/angular-pokemons/node_modules/
+AngularCars/angular-cars/node_modules/
+rxjs_task/node_modules/
+*.pyc
+*__pycache__/
+DjangoBlog/blog/blog/.env

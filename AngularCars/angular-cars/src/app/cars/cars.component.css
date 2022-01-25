@@ -1,0 +1,71 @@
+  .cars {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+  }
+  .cars li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+  }
+  .cars li:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+    left: .1em;
+  }
+  .cars li.selected {
+    background-color: black;
+    color: white;
+  }
+  .cars li.selected:hover {
+    background-color: #505050;
+    color: white;
+  }
+  .cars li.selected:active {
+    background-color: black;
+    color: white;
+  }
+  .cars .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color:#405061;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+  .cars .deleteButton{
+    background-color: #EEE;
+    color: red;
+    position:fixed;
+    left: 270px;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+  }
+  .addButton{
+    background-color: #EEE;
+    color: blue;
+    position:relative;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    line-height: 0%;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  input {
+    padding: .5rem;
+  }

@@ -1,0 +1,41 @@
+<div *ngIf="car"> 
+  <h2>{{car.name}} Details</h2>
+  <div>
+    <label for="car-name">Car: </label>
+    <input id="car-name"
+      [(ngModel)]="car.name"
+      placeholder="name"
+      (ngModelChange)="updateCar()">
+    <p>Services
+      <button (click)="addNewService(car)" class="addButton"> 
+        +
+      </button>
+    </p>
+    <li *ngFor="let service of car.services; let i = index">
+      <p>
+        <label for="service-name">{{i+1}}. Service: </label>
+        <input id="service-name"
+          [(ngModel)]="service.name"
+          placeholder="name"
+          (ngModelChange)="updateCar()">
+        <button (click)="deleteService(car, i)" class="deleteButton"> 
+          X
+        </button>
+      </p>
+      <p>
+        <label for="service-parts">Parts: </label>
+        <input id="service-parts"
+          [(ngModel)]="service.parts" 
+          placeholder="parts"
+          (ngModelChange)="updateCar()">
+      </p>
+      <p>
+        <label for="service-cost">Cost: </label>
+        <input id="service-cost" 
+          [(ngModel)]="service.cost" 
+          placeholder="cost"
+          (ngModelChange)="updateCar()">
+      </p>
+    </li>
+  </div>
+</div>

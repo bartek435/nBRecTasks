@@ -1,0 +1,19 @@
+<h2>
+  <p>
+    Cars
+    <button (click)="addNewCar()" class="addButton"> 
+      +
+    </button>
+  </p>
+</h2>
+<ul class="cars">
+  <li *ngFor="let car of cars; let i = index"
+    (click)="onSelect(car)" 
+    [class.selected]="car === selectedCar">
+    <span class="badge">{{i+1}}</span> {{car.name}}
+    <button (click)="deleteCar(i)" class="deleteButton"> 
+      X
+    </button>
+  </li>
+</ul>
+<app-car-details [car]="selectedCar" (updateCars)="updateCars()"></app-car-details>

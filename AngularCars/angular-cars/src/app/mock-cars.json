@@ -1,0 +1,36 @@
+[
+  { 
+    "name": "BMW",
+    "services": [
+      {
+        "name": "Engine Check",
+        "parts": [],
+        "cost": 300
+      }
+    ]
+  },
+  { 
+    "name": "Audi",
+    "services": [
+      {
+        "name": "Change tires",
+        "parts": [
+          "tires"
+        ],
+        "cost": 200
+      }
+    ]
+  },
+  { 
+    "name": "Mercedes",
+    "services": [
+      {
+        "name": "Change bulb",
+        "parts": [
+          "bulb"
+        ],
+        "cost": 10
+      }
+    ]
+  }
+]

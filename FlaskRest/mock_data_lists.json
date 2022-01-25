@@ -1,0 +1,63 @@
+[
+	{
+		"name":"test",
+		"tasks":[
+			{
+				"name":"test1",
+				"description":"execute test 1",
+				"completed":true
+			},
+			{
+				"name":"test2",
+				"description":"execute test 2",
+				"completed":false
+			},	
+			{
+				"name": "test3",
+				"description":"execute test 3",
+				"completed":false
+			}
+		]
+	},
+	{
+		"name":"homework",
+		"tasks":[
+			{
+				"name":"polish",
+				"description":"read text",
+				"completed":true
+			},
+			{
+				"name":"english",
+				"description":"excercise 1",
+				"completed":false
+			},	
+			{
+				"name": "maths",
+				"description":"calculations",
+				"completed":true
+			}
+		]
+	},
+	{
+		"name":"household chores",
+		"tasks":[
+			{
+				"name":"do the dishes",
+				"description":"",
+				"completed":false
+			},
+			{
+				"name":"sweeping",
+				"description":"",
+				"completed":true
+			},	
+			{
+				"name": "ironing",
+				"description":"",
+				"completed":false
+			}
+		]
+	}
+]	
+

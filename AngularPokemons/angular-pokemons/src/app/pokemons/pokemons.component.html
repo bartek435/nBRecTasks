@@ -1,0 +1,56 @@
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="items">
+      <div class="items-head">
+        <p>Pokemon list</p>
+        <hr>
+      </div>
+      <div class="items-body" *ngFor="let pokemon of pokemons; let i = index">
+        <div class="items-body-content" (click)="displayPokemon(i)">
+          <span style="text-transform:capitalize;">{{pokemon.name}}</span>
+          <i class="fa fa-angle-right"></i>
+        </div>
+      </div>
+      <div class="items-buttons">
+        <div *ngIf="offset===0; else show">
+          <button (click)="changeOffset(-10)" class="items-button-hidden"></button>
+        </div>
+        <ng-template #show>
+          <button (click)="changeOffset(-10)" class="items-button"> 
+            Previous page
+          </button>
+        </ng-template>
+        <button *ngIf="offset<1110; else hide" (click)="changeOffset(10)" class="items-button"> Next page</button>
+        <ng-template #hide>
+          <button (click)="changeOffset(10)" class="items-button-hidden"> Next page</button>
+        </ng-template>
+      </div>
+    </div>
+    <div class="items" *ngIf="selectedPokemon.name">
+      <div class="items-head">
+        <p style="text-transform:capitalize;">{{selectedPokemon.name}} details</p>
+        <hr>
+      </div>
+      <div class="items-body">
+        <i class="fa fa-crosshairs"><span > Stats:</span></i>
+        <div *ngFor="let stat of selectedPokemon.stats" class="fa-ul">
+          <i class={{icons[stat.stat.name]}}><span >  {{stat.stat.name}}: {{stat.base_stat}}</span></i>
+        </div>
+        <i class="fas fa-weight-hanging"><span > Weight: {{selectedPokemon.weight}}</span></i>
+        <i class="fas fa-arrows-alt-v"><span > Height: {{selectedPokemon.height}}</span></i>
+        <i class="fas fa-medal"><span > Base xp: {{selectedPokemon.base_experience}}</span></i>
+        <i class="fas fa-list"><span > Types:</span></i>
+        <div *ngFor="let type of selectedPokemon.types" class="fa-ul">
+          <i class="{{icons[type.type.name]}}"><span >  {{type.type.name}}</span></i>
+        </div>
+        <i class="fas fa-hand-sparkles"><span > Abilities:</span></i>
+        <div *ngFor="let ability of selectedPokemon.abilities" class="fa-ul">
+          <i class="fas fa-dot-circle"><span >  {{ability.ability.name}}</span></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
